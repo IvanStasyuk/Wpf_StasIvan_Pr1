@@ -71,8 +71,8 @@ namespace Wpf_StasIvan_Pr1
 
         private void MainSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            MainInk.DefaultDrawingAttributes.Width = ((Slider)sender).Value;
-            MainInk.DefaultDrawingAttributes.Height = ((Slider)sender).Value;
+            //MainInk.DefaultDrawingAttributes.Width = ((Slider)sender).Value;
+            //MainInk.DefaultDrawingAttributes.Height = ((Slider)sender).Value;
         }
     }
 }
