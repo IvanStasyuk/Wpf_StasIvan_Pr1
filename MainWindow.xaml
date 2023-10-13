@@ -6,6 +6,27 @@
         xmlns:local="clr-namespace:Wpf_StasIvan_Pr1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="RadioButton">
+            <Style.Setters>
+                <Setter Property="Background" Value="DarkBlue"></Setter>
+                <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonA">
+            <Style.Setters>
+                <Setter Property="Background" Value="DarkBlue"></Setter>
+                <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonB">
+            <Style.Setters>
+                <Setter Property="Background" Value="DarkBlue"></Setter>
+                <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+                <EventSetter Event="Click" Handler="Button_Click"></EventSetter>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -43,13 +64,13 @@
             <Separator></Separator>
             <Button x:Name="p5" Height="20" Width="20" Click="p5_Click" Background="WhiteSmoke"></Button>
             <Separator Width="10"></Separator>
-            <Button x:Name="p6" Content="Показать информацию" Height="25" Width="135" Click="p6_Click" Background="LightGray"></Button>
+            <Button x:Name="p6" Content="Показать информацию" Height="25" Width="135" Click="p6_Click" Background="LightGray" Style="{StaticResource ResourceKey=ButtonA}"></Button>
             <Separator></Separator>
-            <Button x:Name="p7" Content="Скрыть информацию" Height="25" Width="135" Click="p7_Click" Background="LightGray"></Button>
+            <Button x:Name="p7" Content="Скрыть информацию" Height="25" Width="135" Click="p7_Click" Background="LightGray" Style="{StaticResource ResourceKey=ButtonA}"></Button>
             <Separator Width="10"></Separator>
-            <Button x:Name="p8" Content="Закрыть окно" Height="25" Width="105" Click="p8_Click" Background="LightGray"></Button>
+            <Button x:Name="p8" Content="Закрыть окно" Height="25" Width="105" Click="p8_Click" Background="LightGray" Style="{StaticResource ResourceKey=ButtonA}"></Button>
             <Separator></Separator>
-            <Button x:Name="next" Content="Задание 2" Background="LightGray" HorizontalAlignment="Right" Click="next_Click"></Button>
+            <Button x:Name="next" Content="Задание 2" Background="LightGray" HorizontalAlignment="Right" Style="{StaticResource ResourceKey=ButtonB}"></Button>
         </ToolBar>
         <TextBox x:Name="i1" Text="Студент 402гр-ИСП Стасюк Иван" Margin="192,103,418,22" Visibility="Collapsed"></TextBox>
         <StatusBar DockPanel.Dock="Bottom" Grid.Row="3">

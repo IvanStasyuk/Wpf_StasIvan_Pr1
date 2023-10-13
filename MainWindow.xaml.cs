@@ -124,7 +124,7 @@ namespace Wpf_StasIvan_Pr1
             this.Close();
         }
 
-        private void next_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window2 window2 = new Window2();
             window2.Show();
